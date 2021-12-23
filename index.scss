@@ -1,0 +1,70 @@
+$bg-color:tomato;
+$color:white;
+$dark:#000;
+$font:arial;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg-color;
+    color: $color;
+    font-family: $font;
+}
+
+.box{
+    width: 1000px;
+    margin: auto;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+        position: relative;
+        a{
+            color: $dark;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            display: block;
+        }&:hover ul{
+            transform: scaleY(1);
+        }
+        a:hover{
+            background: $dark;
+            color: white;
+        }
+        ul{
+            position: absolute;
+            display: block;
+            background-color: #9999;
+            width: 150px;
+            top: 100%;
+            left: 0;
+            transition: .2s;
+            transform: scaleY(0);
+            transform-origin: top;
+            li{
+                display: block;
+                a:hover{
+                    color: $color;
+                    width: 150px;
+            }&:hover{
+                background-color: $color;
+            }
+            }
+        }
+        .mega-menu{
+            position: absolute;
+            width: 700px !important;
+            ul{
+                display: block;
+                
+            }
+        }
+    }
+}
